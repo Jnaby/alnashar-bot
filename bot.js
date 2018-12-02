@@ -10,7 +10,6 @@ client.user.setGame(' Spirrit is back?? ','https://www.twitch.tv/Savage');
 client.on("guildMemberAdd", member => {
     timer = Math.floor(Math.random() * (50000 - 10000 + 2)) + 8000
   let words = [`
-  هل سوف نعود من جديد بـ سبيرت؟ 
  أيُها المُنهك,قد تكُون الحياة غير مُنصِفة مَعك 
 وفي كُل مرة تُحاول النهُوض فيها تُسقِطكَ أرضاً 
 لا تجزع وكُن قوياً إجمع شُتاتك وقِف مُستقيماً إصبر 
@@ -28,7 +27,6 @@ https://discord.gg/aVyxr3Y `]
 client.on("guildMemberAdd", member => {
     timer = Math.floor(Math.random() * (50000 - 10000 + 2)) + 8000
   let words = [`
-  هل سوف نعود من جديد بـ سبيرت؟ 
  أيُها المُنهك,قد تكُون الحياة غير مُنصِفة مَعك 
 وفي كُل مرة تُحاول النهُوض فيها تُسقِطكَ أرضاً 
 لا تجزع وكُن قوياً إجمع شُتاتك وقِف مُستقيماً إصبر 
@@ -46,7 +44,6 @@ https://discord.gg/aVyxr3Y `]
 client.on("guildMemberAdd", member => {
     timer = Math.floor(Math.random() * (50000 - 10000 + 2)) + 8000
   let words = [`
-  هل سوف نعود من جديد بـ سبيرت؟ 
  أيُها المُنهك,قد تكُون الحياة غير مُنصِفة مَعك 
 وفي كُل مرة تُحاول النهُوض فيها تُسقِطكَ أرضاً 
 لا تجزع وكُن قوياً إجمع شُتاتك وقِف مُستقيماً إصبر 
