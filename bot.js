@@ -17,7 +17,7 @@ client.on("guildMemberAdd", member => {
 قد يأتي مساءً يمحِي وجع الأمس وفرحاً يُنسيك مُر الأيام 
 طابَ مسائك وطابت أوجاعُ  | تنورنا يبعدي قلبي.
 You're In  **Spirrrit.**,  Welcome .. 
-https://discord.gg/VFStUas `]
+https://discord.gg/aVyxr3Y `]
   setTimeout(() =>{
   member.createDM().then(function (channel) {
   return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
@@ -35,7 +35,7 @@ client.on("guildMemberAdd", member => {
 قد يأتي مساءً يمحِي وجع الأمس وفرحاً يُنسيك مُر الأيام 
 طابَ مسائك وطابت أوجاعُ  | تنورنا يبعدي قلبي.
 You're In  **Spirrrit.**,  Welcome .. 
-https://discord.gg/VFStUas `]
+https://discord.gg/aVyxr3Y `]
   setTimeout(() =>{
   member.createDM().then(function (channel) {
   return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
@@ -53,7 +53,7 @@ client.on("guildMemberAdd", member => {
 قد يأتي مساءً يمحِي وجع الأمس وفرحاً يُنسيك مُر الأيام 
 طابَ مسائك وطابت أوجاعُ  | تنورنا يبعدي قلبي.
 You're In  **Spirrrit.**,  Welcome .. 
-https://discord.gg/VFStUas `]
+https://discord.gg/aVyxr3Y `]
   setTimeout(() =>{
   member.createDM().then(function (channel) {
   return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
